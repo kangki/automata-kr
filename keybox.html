@@ -1,0 +1,78 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>한글오토마타</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		$("button.btn").css("width","100");
+		$("button.btn").css("margin-bottom","5");
+
+		$("#keybox").on("click", "button", function(e){
+			var el = $(e.currentTarget);
+			var keycode = el.attr("keycode-data");
+			console.log("element:" + el.html() + ",keycode:" + keycode);
+			if (keycode) {
+
+			}
+		});
+
+	});
+	</script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<div id="container-fluid">
+	<div class="span3">
+
+		<h4>kangki-lab</h4>
+	</div>
+	<div class="span10">
+	<h1>한글오토마타</h1>
+		<div>
+			<form>
+				<fieldset>
+					<div>입력값 : <input id="key-in" type="text"></div>
+					<div id="keybox">
+						<div>
+								<button class="btn btn-info" keycode-data="BACK">BACK</button>
+								<button class="btn btn-info" keycode-data="SPACE">SPACE</button>
+								<button class="btn btn-info" keycode-data="ENTER">ENTER</button>
+								<button class="btn btn-danger" keycode-data="CANCEL">CANCEL</button>
+								<button class="btn btn-success" keycode-data="OK">OK</button>
+						</div>
+						<div>
+								<button class="btn btn-primary" keycode-data="01">ㄱㅋ</button>
+								<button class="btn btn-primary" keycode-data="02">ㄴ</button>
+								<button class="btn btn-primary" keycode-data="03">ㄷㅌ</button>
+								<button class="btn btn-primary" keycode-data="04">ㄹ</button>
+								<button class="btn btn-primary" keycode-data="05">ㅁ</button>
+						</div>
+						<div>
+								<button class="btn btn-primary" keycode-data="06">ㅂㅍ</button>
+								<button class="btn btn-primary" keycode-data="07">ㅅ</button>
+								<button class="btn btn-primary" keycode-data="08">ㅇ</button>
+								<button class="btn btn-primary" keycode-data="09">ㅈㅊ</button>
+								<button class="btn btn-primary" keycode-data="10">ㅎ</button>
+						</div>
+						<div>
+								<button class="btn btn-primary" keycode-data="11">ㅏㅑ</button>
+								<button class="btn btn-primary" keycode-data="12">ㅓㅕ</button>
+								<button class="btn btn-primary" keycode-data="13">ㅗㅛ</button>
+								<button class="btn btn-primary" keycode-data="14">ㅜㅠ</button>
+								<button class="btn btn-primary" keycode-data="15">ㅣㅡ</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>	
+</div>
+</body>
+</html>
